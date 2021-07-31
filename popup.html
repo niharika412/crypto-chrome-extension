@@ -7,19 +7,23 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="jumbotron">
   <div class="card" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title">Special title treatment</h5>
 
-      <p>Click the button to change the content of the first table cell.</p>
+      <p>Enter the cryptocurrency you want to track below. </p>
 
-      <table id="myTable">
-      </table>
-      <br>
-
-      <a class="btn btn-primary" id="add-more">Add more</a>
-    </div>
+      <form>
+        <div class="form-group">
+          <label id="cryptoNameLabel" for="cryptoName">Crypto Name (Shorthand)</label>
+          <input class="form-control" id="cryptoName" placeholder="BTC">
+        </div>
+        <button class="btn btn-success" type="submit" id="addBtn">Add to list</button>
+      </form>
+      
+  </div>
+  <p id="test"></p>
   </div>
   <script src="popup.js"></script>
 </body>

@@ -24,28 +24,29 @@
 // }
 let color = '#3aaff7';
 let count = 0;
+let hey = null;
+let stocks = null;
+let prices = null;
 // Function to change the content of t2
-function myFunction() {
+function myFunction(stocks) {
+
+  if (stocks != null && prices != null) {
     var x = document.createElement("TR");
-    x.setAttribute("id", "myTr"+ String(count));
+    x.setAttribute("id", "myTr" + String(count));
     document.getElementById("myTable").appendChild(x);
 
     var y = document.createElement("TD");
     var z = document.createElement("TD");
-    var r = document.createTextNode("2$");
-    var t = document.createTextNode("TESL");
+    var r = document.createTextNode(stocks);
+    var t = document.createTextNode(prices);
     y.appendChild(t);
     z.appendChild(r);
-    document.getElementById("myTr"+String(count)).appendChild(y);
-    document.getElementById("myTr"+String(count)).appendChild(z);
-    count+=1;
-
-    chrome.storage.local.get(['stock'], function(result) {
-        console.log('Value currently is ' + result.key);
-      });
-
+    document.getElementById("myTr" + String(count)).appendChild(y);
+    document.getElementById("myTr" + String(count)).appendChild(z);
+    count += 1;
+  }
 }
 
 // Add event listener to table
-const el = document.getElementById("add-more");
-el.addEventListener("click", myFunction, false);
+// const el = document.getElementById("add-more");
+// el.addEventListener("click", myFunction, false);
